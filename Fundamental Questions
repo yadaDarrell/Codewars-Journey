@@ -1,0 +1,37 @@
+1. Multiply 
+
+Complete this function. What is wrong with this code?
+def multiply(a, b)
+
+#1 Solution
+def multiply(a, b):
+    return a * b
+print(multiply(5,6))
+
+2. Friend or Foe? 
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+#2 Solution 
+def friend(x):
+    shouldBe = []
+    for names in x:
+        if len(names) == 4:
+            shouldBe.append(names)
+        else:
+            continue
+    return shouldBe
+x = ["Ryan", "Kieran", "Mark"]
+print(friend(x))
+
+3. Shortest Word
+Simple, given a string of words, return the length of the shortest word(s).
+String will never be empty and you do not need to account for different data types
+
+#3 Solution
+def find_short(s):
+    l = s.split()
+    return len(min(l,key=len))# l: shortest word length
+s = "bitcoin take over the world maybe who knows perhaps"
+print(find_short(s))
