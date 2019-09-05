@@ -35,3 +35,41 @@ def find_short(s):
     return min(l)
 s = "bitcoin take over the world maybe who knows perhaps"
 print(find_short(s))
+
+4. Opposite number
+Given a number, find its opposite.
+
+#4 Solution
+def opposite(num):
+    return -num
+    
+5. Convert Number to String
+Create a function that transforms a number to a string.
+
+#5 Solution
+def num_to_string(num):
+    return str(num)
+    
+6. Consider an array of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+For example : 
+
+[True,  True,  True,  False,
+  True,  True,  True,  True ,
+  True,  False, True,  False,
+  True,  False, False, True ,
+  True,  True,  True,  True ,
+  False, False, True,  True]
+  
+ #6 Solution Method 1
+ 
+ def count_sheep(arrayOfSheep):
+    num_of_true = 0
+    for each_count in arrayOfSheep:
+        if each_count == True:
+            num_of_true += each_count
+    return num_of_true
+
+#6 Solution Method 2
+ 
+ def count_sheep(arrayOfSheep):
+    return arrayOfSheep.count(True)
