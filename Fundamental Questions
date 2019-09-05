@@ -31,7 +31,7 @@ String will never be empty and you do not need to account for different data typ
 
 #3 Solution
 def find_short(s):
-    l = s.split()
-    return len(min(l,key=len))# l: shortest word length
+    l = map(len,s.split())
+    return min(l)
 s = "bitcoin take over the world maybe who knows perhaps"
 print(find_short(s))
